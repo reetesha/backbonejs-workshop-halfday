@@ -2,7 +2,8 @@ define([
     'backbone',
     'underscore',
     'scripts/BackboneRouter',
-], function(Backbone,_, BackboneRouter) {
+    'scripts/Controller',
+], function(Backbone,_, BackboneRouter,CustomerController) {
 
     "use strict";
 
@@ -28,7 +29,14 @@ define([
     /* loads the cusotmerlist view */
     Application.prototype.showContactList = function() {debugger;
             //Avoid creating multipl Object.
-            console.log('Application.js : Route to = '+this.router.routes.customerlist+ ' method')
+        console.log('Application.js : Route to = '+this.router.routes.customerlist+ ' method');
+
+        if(this.CustomerController==null || this.CustomerController==='undefined') {
+               this.CustomerController = new CustomerController({
+                   el: "#contacts"
+               });
+        }
+        this.CustomerController.show();
     }
 
     return Application;
