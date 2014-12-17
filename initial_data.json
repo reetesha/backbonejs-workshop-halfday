@@ -1,0 +1,8 @@
+[
+    {"id":"101","firstName":"Reetesh","lastName":"Agrawal","email":"reetesh_agrawal@intuit.com","phone":"9886358282"},
+    {"id":"102","firstName":"Prateek","lastName":"Mandloi","email":"Prateek_Mandloi@intuit.com","phone":"9886358286"},
+    {"id":"103","firstName":"Anil","lastName":"Pakina","email":"Anil_Pakina@intuit.com","phone":"9886358283"},
+    {"id":"104","firstName":"Amit","lastName":"Maurya","email":"Amit_Maurya@intuit.com","phone":"9886358284"},
+    {"id":"105","firstName":"Chandan","lastName":"PT","email":"Chandan_PT@intuit.com","phone":"9886358285"},
+    {"id":"106","firstName":"Samar","lastName":"Ranjan","email":"samar_ranjan@intuit.com","phone":"9886358285"}
+]
