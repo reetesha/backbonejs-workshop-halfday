@@ -9,7 +9,7 @@ module.exports = function (grunt) {
     var DISTRIBUTION_DIRECTORY = 'dist/app/';
     var COMPILED_JS_FILENAME = 'main-built.js';
     var SRC_ROOT_DIRECTORY = "app/";
-    var DISTRIBUTION_FILENAME = "backbonespa-" + APPLICATION_VERSION_NUMBER + ".tar";//Change tar to ZIP if you are using window machine
+    var DISTRIBUTION_FILENAME = "backbonejsws-" + APPLICATION_VERSION_NUMBER + ".tar";//Change tar to ZIP if you are using window machine
 
     var ENV_PARAM_NAME = "env";
     var CONFIGURED_ENVIRONMENT = grunt.option(ENV_PARAM_NAME);
@@ -103,10 +103,10 @@ module.exports = function (grunt) {
         compress: {
             main: {
                 options: {
-                    archive: DISTRIBUTION_DIRECTORY + DISTRIBUTION_FILENAME
+                    archive: 'dist/'+DISTRIBUTION_FILENAME
                 },
                 files: [
-                    {expand: true, cwd: DISTRIBUTION_DIRECTORY, src: ['**'], dest: ''} // makes all src relative to cwd
+                    {expand: true, cwd: 'dist/', src: ['**'], dest: ''} // makes all src relative to cwd
                 ]
             }
         },
