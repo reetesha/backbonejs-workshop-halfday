@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Single page Application Demo using BackboneJS</title>
+    <!--<link rel="stylesheet" type="text/css" href="styles/main${build.timestamp}.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="styles/style${build.timestamp}.css">-->
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+    <!-- One  JS file for SPA -->
+<div id="mainTemplate">
+       <header id="header" style="top:0px;">
+            <nav class="navigation">
+                <div class="navbar " style="margin-bottom:0px">
+                    <div class="navbar-inner" style="border-radius:0px">
+                        <div style="position:relative;">
+                            <div class="">
+                                <a href="#" class="brand">Single Page Application Demo using BackboneJS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="resize"></div>
+        <div id="Wrapper" class="paperPanel" style="padding:0px;margin-top:60px">
+                <div id="Wrapper2">
+                <article id="contents" style="border-left: 1px solid #ccc;">
+                        <!-- Place Holder -->
+                    <div id="contacts"></div>
+                    
+                </article>
+             </div>
+                <footer id="copyrights">
+                   <div class="trowserFooter">
+                        <div class="navbar " style="margin-bottom:0px">
+                            <div class="">
+                                <div class="">
+                                    <div class="nav-collapse collapse navbar-inverse-collapse">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </footer>
+         </div>
+</div>
+</body>
+    
+    <!-- Only One JS file Included in SPA (Index.html)-->
+    <script data-main="start.js" src="scripts/vendors/require.js"></script>
+    <!-- <script src="scripts/vendors/jquery.js"></script>
+    <script src="scripts/vendors/bootstrap.js"></script>
+    <script src="scripts/vendors/bootstrap-modal.js"></script>-->
+
+    <!--<script data-main="start${build.timestamp}.js" src="scripts/vendors/require${build.timestamp}.js"></script>
+    <script src="scripts/vendors/require.js"></script>
+    <script type="text/javascript" src="scripts/start.js"></script>-->
+</html>
