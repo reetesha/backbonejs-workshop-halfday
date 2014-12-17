@@ -2,11 +2,13 @@ define([
     'jquery',
     'backbone',
     'scripts/view/ContactsView',
+    'scripts/view/ContactEditView',
+    'scripts/view/ContactAddView',
     'scripts/model/Contacts',
     'scripts/collection/Contacts',
     'text!scripts/template/contacts.html',
     'envconfig'
-], function($, Backbone, ContactsView, ContactModel, ContactCollection, contactsTemplate, EnvConfig) {
+], function($, Backbone, ContactsView, ContactEditView, ContactAddView, ContactModel, ContactCollection, contactsTemplate, EnvConfig) {
     "use strict";
 
     
@@ -16,11 +18,11 @@ define([
 
         initialize: function() {
                 //Backbone Listern :
-                //this.listenTo(Backbone, "editContactView", this.editContact);
-                //this.listenTo(Backbone, "addContactView", this.addContact);                
-                //this.listenTo(Backbone, "updateContactInServer", this.updateContactInServer);
-                //this.listenTo(Backbone, "addContactInServer", this.addContactInServer);
-                //this.listenTo(Backbone, "removeContactFromServer", this.removeContactFromServer);
+                this.listenTo(Backbone, "editContactView", this.editContact);
+                this.listenTo(Backbone, "addContactView", this.addContact);                
+                this.listenTo(Backbone, "updateContactInServer", this.updateContactInServer);
+                this.listenTo(Backbone, "addContactInServer", this.addContactInServer);
+                this.listenTo(Backbone, "removeContactFromServer", this.removeContactFromServer);
         },
 
         show: function() {
@@ -50,7 +52,7 @@ define([
             this.view.render();
             this.$el.html( this.view.el );
         },
-        /*
+        
         updateContactInServer: function(eventData) {debugger;
             
             var contactModel=new ContactModel();
@@ -117,7 +119,7 @@ define([
             this.addView.model = this.model;
             this.addView.render();
             this.$el.html( this.addView.el ); 
-        },*/
+        },
         
     });
 
