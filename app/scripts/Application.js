@@ -15,7 +15,7 @@ define([
     Application.prototype.init = function () {
         var r = new BackboneRouter(this);
         this.router = r;
-        if(!Backbone.history.start( {root:"/backbonespa/app/customer"} )){
+        if(!Backbone.history.start()){
                     r.navigate("/customerlist", true);
         }
         this.bindEvents();
