@@ -1,7 +1,6 @@
 var express = require('express'),
     http = require('http'),
     fs = require('fs'),
-    passport = require('passport'),
     routes = require('./routes').routes;
 
 var app = express();
