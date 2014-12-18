@@ -16,12 +16,8 @@ define([
         initialize: function(application) {
             //Simple function to automatically log routes that were triggered by filtering route
             this.Application = application;
-			this.bind("route", function(route, args) {
-                console.log("Route '" + route + "' triggered.");
-			});
         },
-
-
+        
         routes: {
             "customerlist" : "doContactList"
         },  
