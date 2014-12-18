@@ -1,8 +1,6 @@
 
-var passport = require('passport'),
-    _ = require('underscore'),
-  LocalStrategy = require('passport-local').Strategy;
-
+var _ = require('underscore');
+  
 exports.routes = function(app, contacts_json) {
 
  var individualRoutes = {
