@@ -9,7 +9,21 @@ define([
 
         template:_.template(contactsTemplate),
 
-        initialize: function() {
+        render: function() {
+
+            var contacts = this.model.toJSON();
+            this.template =  contactsTemplate;
+            this.template= _.template(this.template);
+            if(contacts && contacts.length > 0) {
+                   this.$el.html(this.template({contacts: contacts}));
+               }
+                else {
+                    this.$el.html(this.template({contacts: contacts}));
+                }
+
+
+        }
+        /*initialize: function() {
             //if (this.options.template) {
               this.template =  contactsTemplate;
             //}
@@ -19,9 +33,10 @@ define([
             'click .addContact' : 'addContactView',
             'click .removeContact' : 'removeContact',
 
-        },
+        },*/
+        
 
-        editContactView: function(e) {
+        /*editContactView: function(e) {
             var contacts = this.model.toJSON();
             var contactId = e.target.id;
             var cont=contacts[0];
@@ -43,22 +58,9 @@ define([
         removeContact: function(e) {
             var contactid=e.target.id;
             Backbone.trigger("removeContactFromServer",{contactid:contactid});  
-        },
+        },*/
         
-        render: function() {
-
-            var contacts = this.model.toJSON();
-            this.template =  contactsTemplate;
-            this.template= _.template(this.template);
-            if(contacts && contacts.length > 0) {
-                   this.$el.html(this.template({contacts: contacts}));
-               }
-                else {
-                    this.$el.html(this.template({contacts: contacts}));
-                }
-
-
-            }
+        
     });
 
     return ContactsView;

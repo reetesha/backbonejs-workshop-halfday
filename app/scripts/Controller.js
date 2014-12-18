@@ -14,14 +14,14 @@ define([
 
         model: {},
 
-        initialize: function() {
-                //Backbone Listern :
-                //this.listenTo(Backbone, "editContactView", this.editContact);
-                //this.listenTo(Backbone, "addContactView", this.addContact);                
-                //this.listenTo(Backbone, "updateContactInServer", this.updateContactInServer);
-                //this.listenTo(Backbone, "addContactInServer", this.addContactInServer);
-                //this.listenTo(Backbone, "removeContactFromServer", this.removeContactFromServer);
-        },
+        /*initialize: function() {
+                Backbone Listern :
+                this.listenTo(Backbone, "editContactView", this.editContact);
+                this.listenTo(Backbone, "addContactView", this.addContact);                
+                this.listenTo(Backbone, "updateContactInServer", this.updateContactInServer);
+                this.listenTo(Backbone, "addContactInServer", this.addContactInServer);
+                this.listenTo(Backbone, "removeContactFromServer", this.removeContactFromServer);
+        },*/
 
         show: function() {
             
@@ -100,8 +100,6 @@ define([
         
         },
         
-       
-
         editContact: function(contact) {
             this.editView = new ContactEditView();
             this.model = contact;
