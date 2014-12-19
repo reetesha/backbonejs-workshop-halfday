@@ -53,7 +53,7 @@ define([
             this.$el.html( this.view.el );
         },
         
-        updateContactInServer: function(eventData) {debugger;
+        updateContactInServer: function(eventData) {
             
             var contactModel=new ContactModel();
 
